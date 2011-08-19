@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="com.deCampredon.flexAcacia.validationParsley.processor.ValidStatusProcessor"/>
+    <classEntry path="com.deCampredon.flexAcacia.validationParsley.decorator.ValidStatusDecorator"/>
+    <classEntry path="com.deCampredon.flexAcacia.validationParsley.ValidationSupport"/>
+    <classEntry path="com.deCampredon.flexAcacia.validationParsley.subscribers.ParsleyAutoValidationSubscriber"/>
+  </includeClasses>
+  <includeResources>
+    <resourceEntry destPath="design.xml" sourcePath="design.xml"/>
+    <resourceEntry destPath="validation-parsley-manifest.xml" sourcePath="validation-parsley-manifest.xml"/>
+    <resourceEntry destPath="metadata.xml" sourcePath="metadata.xml"/>
+  </includeResources>
+  <namespaceManifests>
+    <namespaceManifestEntry manifest="validation-parsley-manifest.xml" namespace="http://francois.de-campredon.fr/flexAcacia"/>
+  </namespaceManifests>
+</flexLibProperties>

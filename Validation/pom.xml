@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.deCampredon.flexAcacia</groupId>
+		<artifactId>flexAcacia</artifactId>
+		<version>0.1-SNAPSHOT</version>
+	</parent>
+
+	<version>0.1-SNAPSHOT</version>
+	<artifactId>validation</artifactId>
+	<packaging>swc</packaging>
+	<name>Validation</name>
+	<description>Validation libraries</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.adobe.flex.framework</groupId>
+			<artifactId>flex-framework</artifactId>
+			<version>${flex-sdk-version}</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>r1.deval</groupId>
+			<artifactId>D.eval</artifactId>
+			<version>1.1</version>
+			<type>swc</type>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<!--  <testSourceDirectory>test</testSourceDirectory>-->
+		<plugins>
+			<plugin>
+				<groupId>org.sonatype.flexmojos</groupId>
+				<artifactId>flexmojos-maven-plugin</artifactId>
+				<version>${flex-mojos-version}</version>
+				<dependencies>
+					<dependency>
+						<groupId>com.adobe.flex</groupId>
+						<artifactId>compiler</artifactId>
+						<version>${flex-sdk-version}</version>
+						<type>pom</type>
+					</dependency>
+				</dependencies>
+				<extensions>true</extensions>
+				<executions>
+			    	<execution>
+		        		<phase>install</phase>
+		            	<goals>
+		             		<goal>asdoc</goal>
+		            	</goals>
+		        	</execution>
+		        </executions>
+				<configuration>
+					<debug>${flex-debug}</debug>
+					<optimize>${flex-optimize}</optimize>
+					<verboseStacktraces>${flex-verbose-stacktraces}</verboseStacktraces>
+					<targetPlayer>${player-version}</targetPlayer>
+					<includeSources>
+						<param>${project.build.sourceDirectory}</param>
+					</includeSources>
+					<localesSourcePath>locale/{locale}</localesSourcePath>
+					<allowSourcePathOverlap>true</allowSourcePathOverlap>
+					<showWarnings>true</showWarnings>
+					<localesCompiled>
+						<locale>en_US</locale>
+						<locale>fr_FR</locale>
+					</localesCompiled>
+					<includeNamespaces>
+						<namespace>http://francois.de-campredon.fr/flexAcacia</namespace>
+					</includeNamespaces>
+					<namespaces>
+						<namespace>
+							<uri>http://francois.de-campredon.fr/flexAcacia</uri>
+							<manifest>${project.build.sourceDirectory}/validation-manifest.xml</manifest>
+						</namespace>
+					</namespaces>
+					<includeFiles>
+						<include>${project.build.sourceDirectory}/design.xml</include>
+					</includeFiles>
+					<keepAs3Metadatas append="true">
+					 	<keepAs3Metadata>Metadata</keepAs3Metadata>
+					 	<keepAs3Metadata>Required</keepAs3Metadata>
+					</keepAs3Metadatas>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

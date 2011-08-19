@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<componentPackage>
+    <component id="ValidationSupport" class="com.deCampredon.flexAcacia.validationParsley.ValidationSupport"/>
+    <component id="ParsleyAutoValidationSubscriber" class="com.deCampredon.flexAcacia.validationParsley.subscribers.ParsleyAutoValidationSubscriber"/>
+</componentPackage>

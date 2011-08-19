@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotations version="1.0">
+	
+	
+	<metadata name="Assert" description="Allow you to validate an object against an expression that will be evaluated in context of the validation target" >
+		<context name="class">
+			<attribute name="field" type="String" showHint="false"  required="true"
+				description="name of the constraint (required)" />
+			<attribute name="expression" type="String" showHint="false"  required="true"
+				description="expression to be evaluated" />
+			<attribute name="errorMessage" type="String" showHint="false"  required="true"
+				description="Error message" />
+		</context>
+	</metadata>
+	
+	<metadata name="Email"  description="Allow you to validate that a property have a valid email address format" >
+		<context name="variable" />
+		<context name="getter" />
+		<context name="setter" />
+		<attribute name="invalideCharError" type="String" showHint="false"  required="false"/>
+		<attribute name="invalidDomainError" type="String" showHint="false"  required="false"/>
+		<attribute name="invalidIPDomainError" type="String" showHint="false"  required="false"/>
+		<attribute name="missingAtSignError" type="String" showHint="false"  required="false"/>
+		<attribute name="missingPeriodInDomainError" type="String" showHint="false"  required="false"/>
+		<attribute name="missingUsernameError" type="String" showHint="false"  required="false"/>
+		<attribute name="tooManyAtSignsError" type="String" showHint="false"  required="false"/>
+	</metadata>
+	
+	<metadata name="Future"  description="Allow you to validate that a property have a date property is in the future" >
+		<context name="variable" />
+		<context name="getter" />
+		<context name="setter" />
+		<attribute name="strict" type="String" showHint="false"  required="false"/>
+		<attribute name="includeTime" type="String" showHint="false"  required="false"/>
+		<attribute name="errorMessage" type="String" showHint="false"  required="false"/>
+	</metadata>
+	
+	<metadata name="Past"  description="Allow you to validate that a property have a date property is in the past" >
+		<context name="variable" />
+		<context name="getter" />
+		<context name="setter" />
+		<attribute name="strict" type="String" showHint="false"  required="false"/>
+		<attribute name="includeTime" type="String" showHint="false"  required="false"/>
+		<attribute name="errorMessage" type="String" showHint="false"  required="false"/>
+	</metadata>
+	
+	<metadata name="Max"  description="Allow you to validate that a number do not exceeds a maximun" >
+		<context name="variable" />
+		<context name="getter" />
+		<context name="setter" />
+		<attribute name="max" type="String" showHint="false"  required="true"/>
+		<attribute name="errorMessage" type="String" showHint="false"  required="false"/>
+	</metadata>
+	
+	<metadata name="Min"  description="Allow you to validate that a number is not lower than a minimum" >
+		<context name="variable" />
+		<context name="getter" />
+		<context name="setter" />
+		<attribute name="min" type="String" showHint="false"  required="true"/>
+		<attribute name="errorMessage" type="String" showHint="false"  required="false"/>
+	</metadata>
+	
+	<metadata name="NotNull"  description="Allow you to validate that a property is not null or empty" >
+		<context name="variable" />
+		<context name="getter" />
+		<context name="setter" />
+		<attribute name="strict" type="String" showHint="false"  required="false"/>
+		<attribute name="errorMessage" type="String" showHint="false"  required="false"/>
+	</metadata>
+	
+	<metadata name="Null"  description="Allow you to validate that a property is null or empty" >
+		<context name="variable" />
+		<context name="getter" />
+		<context name="setter" />
+		<attribute name="strict" type="String" showHint="false"  required="false"/>
+		<attribute name="errorMessage" type="String" showHint="false"  required="false"/>
+	</metadata>
+	
+	<metadata name="Pattern"  description="Allow you to validate that a string agaisnt a regexp" >
+		<context name="variable" />
+		<context name="getter" />
+		<context name="setter" />
+		<attribute name="expression" type="String" showHint="false"  required="true"/>
+		<attribute name="flags" type="String" showHint="false"  required="false"/>
+		<attribute name="errorMessage" type="String" showHint="false"  required="false"/>
+	</metadata>
+	
+	<metadata name="Size"  description="Allow you to validate that a string agaisnt a regexp" >
+		<context name="variable" />
+		<context name="getter" />
+		<context name="setter" />
+		<attribute name="min" type="String" showHint="false"  required="false"/>
+		<attribute name="max" type="String" showHint="false"  required="false"/>
+		<attribute name="tooLongError"  type="String" showHint="false"  required="false" />
+		<attribute name="tooShortError"  type="String" showHint="false"  required="false" />
+		<attribute name="errorMessage" type="String" showHint="false"  required="false"/>
+	</metadata>
+</annotations>
+

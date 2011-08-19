@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<core:ValidationModel xmlns="http://francois.de-campredon.fr/flexAcacia"
+				 xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				 xmlns:s="library://ns.adobe.com/flex/spark" 
+				 xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:core="com.deCampredon.flexAcacia.validation.core.*" >
+		 
+	<Size field="firstName" min="2" max="50" />
+	<NotNull field="firstName" />
+	
+	
+	<Size field="lastName" min="2" max="50" />
+	<NotNull field="lastName" />
+	
+	<Past field="birthDay" />
+	
+	<Email field="email" />
+	<NotNull field="email" />
+	
+	<Size field="userName" min="6" max="50" />
+	<NotNull field="userName" />
+</core:ValidationModel>

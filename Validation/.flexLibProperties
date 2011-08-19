@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="com.deCampredon.flexAcacia.validation.constraints.AssertConstraint"/>
+    <classEntry path="com.deCampredon.flexAcacia.validation.constraints.FutureConstraint"/>
+    <classEntry path="com.deCampredon.flexAcacia.validation.constraints.MaxConstraint"/>
+    <classEntry path="com.deCampredon.flexAcacia.validation.constraints.MinConstraint"/>
+    <classEntry path="com.deCampredon.flexAcacia.validation.constraints.PastConstraint"/>
+    <classEntry path="com.deCampredon.flexAcacia.validation.constraints.PatternConstraint"/>
+    <classEntry path="com.deCampredon.flexAcacia.validation.constraints.SubValidationTarget"/>
+    <classEntry path="com.deCampredon.flexAcacia.validation.core.Constraint"/>
+    <classEntry path="com.deCampredon.flexAcacia.validation.core.ValidationModel"/>
+    <classEntry path="com.deCampredon.flexAcacia.validation.core.ValidationSession"/>
+    <classEntry path="com.deCampredon.flexAcacia.validation.subscribers.AutoValidationSubscriber"/>
+    <classEntry path="com.deCampredon.flexAcacia.validation.subscribers.ValidationSubscriber"/>
+    <classEntry path="com.deCampredon.flexAcacia.validation.utils.PropertyUtil"/>
+  </includeClasses>
+  <includeResources>
+    <resourceEntry destPath="design.xml" sourcePath="design.xml"/>
+    <resourceEntry destPath="validation-manifest.xml" sourcePath="validation-manifest.xml"/>
+  </includeResources>
+  <namespaceManifests>
+    <namespaceManifestEntry manifest="validation-manifest.xml" namespace="http://francois.de-campredon.fr/flexAcacia"/>
+  </namespaceManifests>
+</flexLibProperties>

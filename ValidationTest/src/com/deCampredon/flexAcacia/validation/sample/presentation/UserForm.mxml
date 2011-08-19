@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Panel xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" 
+		 xmlns:presentation="com.deCampredon.flexAcacia.validation.sample.presentation.*" 
+		 xmlns:acacia="http://francois.de-campredon.fr/flexAcacia"
+		 title="User Creation" xmlns:subscribers="com.deCampredon.flexAcacia.validation.subscribers.*">
+	<fx:Declarations>
+		<presentation:UserFormPM id="pm" />
+		<subscribers:AutoValidationSubscriber target="{pm}" validationModel="{pm.validationModel}" />
+	</fx:Declarations>
+	<s:layout>
+		<s:VerticalLayout horizontalAlign="center"  paddingBottom="10" paddingRight="10" paddingLeft="10" paddingTop="10" />
+	</s:layout>
+	<mx:Form paddingBottom="0" paddingRight="0" paddingLeft="0" paddingTop="0">
+		<mx:FormItem label="Fist Name :">
+			<s:TextInput validationSubField="user.firstName" text="@{pm.user.firstName}" />
+		</mx:FormItem>
+		<mx:FormItem label="Last Name :">
+			<s:TextInput validationSubField="user.lastName" text="@{pm.user.lastName}" />
+		</mx:FormItem>
+		<mx:FormItem label="Birth Day :">
+			<mx:DateField validationSubField="user.birthDay" selectedDate="@{pm.user.birthDay}" />
+		</mx:FormItem>
+		<mx:FormItem label="User Name">
+			<s:TextInput validationSubField="user.userName" text="@{pm.user.userName}" />
+		</mx:FormItem>
+		<mx:FormItem label="Email :">
+			<s:TextInput validationSubField="user.email" text="@{pm.user.email}" />
+		</mx:FormItem>
+		<mx:FormItem label="Password :">
+			<s:TextInput validationSubField="password" text="@{pm.password}" />
+		</mx:FormItem>
+		<mx:FormItem label="Confirm :">
+			<s:TextInput validationSubField="confirm,passwordConfirm" text="@{pm.confirm}" />
+		</mx:FormItem>
+	</mx:Form>
+	<s:Button label="save" click="pm.save()" />
+</s:Panel>

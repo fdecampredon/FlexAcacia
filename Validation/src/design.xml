@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<design>
+   <namespaces>
+     <namespace prefix="acacia" uri="http://francois.de-campredon.fr/flexAcacia"/>
+   </namespaces>
+</design>

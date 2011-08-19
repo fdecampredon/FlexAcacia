@@ -1,0 +1,86 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                     http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.deCampredon.flexAcacia</groupId>
+	<artifactId>flexAcacia</artifactId>
+	<name>FlexAcacia</name>
+	<version>0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<description>Set of utilities libraries</description>
+
+
+	<repositories>
+		<repository>
+			<id>sonatype-flexmojos</id>
+			<name>Sonatype FlexMojos repository</name>
+			<url>http://repository.sonatype.org/content/groups/flexgroup/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>local-repository</id>
+			<url>file:///Users/hareth/Documents/workspaces/FlexAcacia/local-repository</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>sonatype-flexmojos</id>
+			<name>Sonatype FlexMojos repository</name>
+			<url>https://repository.sonatype.org/content/groups/flexgroup/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<modules>
+		<module>Validation</module>
+		<module>ValidationParsley</module>
+	</modules>
+	
+	
+	<properties>
+		<!-- dependency version -->
+		<flex-sdk-version>4.5.1.21328</flex-sdk-version>
+		<flex-mojos-version>4.0-RC1</flex-mojos-version>
+		<parsley-version>2.4.1</parsley-version>
+		<player-version>10.2</player-version>
+		<alivepdf-version>0.15</alivepdf-version>
+		<swfVersion>11</swfVersion>
+		<flex-debug>true</flex-debug>
+		<flex-optimize>false</flex-optimize>
+
+	</properties>
+	<profiles>
+		<profile>
+			<id>production</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<flex-verbose-stacktraces>true</flex-verbose-stacktraces>
+			</properties>
+		</profile>
+		<profile>
+			<id>debug</id>
+			<properties>
+				<flex-verbose-stacktraces>true</flex-verbose-stacktraces>
+			</properties>
+		</profile>
+	</profiles>
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>http://sourceforge.net/adobe/cairngorm/wiki/License/</url>
+		</license>
+	</licenses>
+
+
+</project>

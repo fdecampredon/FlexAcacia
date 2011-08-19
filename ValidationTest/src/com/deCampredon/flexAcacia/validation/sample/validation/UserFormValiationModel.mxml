@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<core:ValidationModel xmlns="http://francois.de-campredon.fr/flexAcacia" 
+				 xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				 xmlns:s="library://ns.adobe.com/flex/spark" 
+				 xmlns:mx="library://ns.adobe.com/flex/mx" 
+				 xmlns:domain="com.deCampredon.flexAcacia.validation.sample.domain.*" xmlns:constraints="com.deCampredon.flexAcacia.validation.constraints.*" xmlns:core="com.deCampredon.flexAcacia.validation.core.*" xmlns:validation="com.deCampredon.flexAcacia.validation.sample.validation.*">
+	
+	<Assert field="passwordConfirm" expression="password==confirm" errorMessage="password and confirmation must be equals" />
+	<Size field="password" min="8" max="255" />
+	<Pattern field="password" expression=".*[a-z].*" flags="i" errorMessage="password must contain letter" />
+	<Pattern field="password" expression=".*[0-9].*" errorMessage="password must contain digit" />
+	<NotNull field="password"/>
+	
+	<NotNull field="confirm"/>
+	
+	<SubValidationTarget field="user">
+		<validationModel>
+			<validation:UserValidationModel />
+		</validationModel>
+	</SubValidationTarget>
+</core:ValidationModel>

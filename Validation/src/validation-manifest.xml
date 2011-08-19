@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<componentPackage>
+  	<component id="ValidationModel" class="com.deCampredon.flexAcacia.validation.core.ValidationModel"/>
+    <component id="ValidationSubscriber" class="com.deCampredon.flexAcacia.validation.subscribers.ValidationSubscriber"/>
+    <component id="AutoValidationSubscriber" class="com.deCampredon.flexAcacia.validation.subscribers.AutoValidationSubscriber"/>
+    <component id="SubValidationTarget" class="com.deCampredon.flexAcacia.validation.constraints.SubValidationTarget"/>
+    <component id="Assert" class="com.deCampredon.flexAcacia.validation.constraints.AssertConstraint"/>
+    <component id="Email" class="com.deCampredon.flexAcacia.validation.constraints.EmailConstraint"/>
+    <component id="Future" class="com.deCampredon.flexAcacia.validation.constraints.FutureConstraint"/>
+    <component id="Max" class="com.deCampredon.flexAcacia.validation.constraints.MaxConstraint"/>
+    <component id="Min" class="com.deCampredon.flexAcacia.validation.constraints.MinConstraint"/>
+    <component id="NotNull" class="com.deCampredon.flexAcacia.validation.constraints.NotNullConstraint"/>
+    <component id="Past" class="com.deCampredon.flexAcacia.validation.constraints.PastConstraint"/>
+    <component id="Pattern" class="com.deCampredon.flexAcacia.validation.constraints.PatternConstraint"/>
+    <component id="Size" class="com.deCampredon.flexAcacia.validation.constraints.SizeConstraint"/>
+</componentPackage>

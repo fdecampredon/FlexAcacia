@@ -1,0 +1,32 @@
+<overviews>
+    <packages>
+        <package name="com.deCampredon.flexAcacia.validation">
+            <shortDescription>
+                <![CDATA[
+					FlexAcacia Validation Library.
+					Complete documentation can be found at &lt;a href="http://francois.de-campredon.fr/flexAcacia#ValidationLibrary" 
+					target="_blank"&gt;the documentation page&lt;/a&gt;
+				]]>
+            </shortDescription>
+            <description>
+                <![CDATA[
+					FlexAcacia Validation Library
+					Complete documentation can be found at &lt;a href="http://francois.de-campredon.fr/flexAcacia#ValidationLibrary" 
+					target="_blank"&gt;the documentation page&lt;/a&gt;
+				]]>
+            </description>
+        </package>
+        <package name="com.deCampredon.flexAcacia.validation.constraints">
+            <shortDescription>
+                <![CDATA[
+					Set of predefined constraint usable with the Validation Library
+				]]>
+            </shortDescription>
+            <description>
+                <![CDATA[
+					Set of predefined constraints usable with the Validation Library
+				]]>
+            </description>
+        </package>
+    </packages>
+</overviews>

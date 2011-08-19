@@ -1,0 +1,19 @@
+<overviews>
+    <packages>
+        <package name="com.deCampredon.flexAcacia.validationParsley">
+            <shortDescription>
+                <![CDATA[
+					FlexAcacia Validation Library for Parlsey.
+					Complete documentation can be found at &lt;a href="http://francois.de-campredon.fr/flexAcacia#ValidationLibrary" 
+					target="_blank"&gt;the documentation page&lt;/a&gt;
+				]]>
+            </shortDescription>
+            <description>
+                <![CDATA[
+					FlexAcacia Validation Library for Parlsey.
+					Complete documentation can be found at &lt;a href="http://francois.de-campredon.fr/flexAcacia#ValidationLibrary" 
+					target="_blank"&gt;the documentation page&lt;/a&gt;
+				]]>
+            </description>
+        </package>
+</overviews>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.deCampredon.flexAcacia</groupId>
+		<artifactId>flexAcacia</artifactId>
+		<version>0.1-SNAPSHOT</version>
+	</parent>
+
+	<version>0.1-SNAPSHOT</version>
+	<artifactId>validation-parsley</artifactId>
+	<packaging>swc</packaging>
+	<name>ValidationParsley</name>
+	<description>Validation libraries extention for Parsley</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.adobe.flex.framework</groupId>
+			<artifactId>flex-framework</artifactId>
+			<version>${flex-sdk-version}</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>com.deCampredon.flexAcacia</groupId>
+			<artifactId>validation</artifactId>
+			<version>0.1-SNAPSHOT</version>
+			<type>swc</type>
+		</dependency>
+		<dependency>
+			<groupId>org.spicefactory</groupId>
+			<artifactId>spicelib-flex</artifactId>
+			<version>2.4</version>
+			<type>swc</type>
+		</dependency>
+		<dependency>
+			<groupId>org.spicefactory</groupId>
+			<artifactId>parsley-flex</artifactId>
+			<version>2.4</version>
+			<type>swc</type>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<!--  <testSourceDirectory>test</testSourceDirectory>-->
+		<plugins>
+			<plugin>
+				<groupId>org.sonatype.flexmojos</groupId>
+				<artifactId>flexmojos-maven-plugin</artifactId>
+				<version>${flex-mojos-version}</version>
+				<dependencies>
+					<dependency>
+						<groupId>com.adobe.flex</groupId>
+						<artifactId>compiler</artifactId>
+						<version>${flex-sdk-version}</version>
+						<type>pom</type>
+					</dependency>
+				</dependencies>
+				<extensions>true</extensions>
+				<executions>
+			    	<execution>
+		        		<phase>install</phase>
+		            	<goals>
+		             		<goal>asdoc</goal>
+		            	</goals>
+		        	</execution>
+		        </executions>
+				<configuration>
+					<debug>${flex-debug}</debug>
+					<optimize>${flex-optimize}</optimize>
+					<verboseStacktraces>${flex-verbose-stacktraces}</verboseStacktraces>
+					<targetPlayer>${player-version}</targetPlayer>
+					<includeSources>
+						<param>${project.build.sourceDirectory}</param>
+					</includeSources>
+					<allowSourcePathOverlap>true</allowSourcePathOverlap>
+					<showWarnings>true</showWarnings>
+					<includeNamespaces>
+						<namespace>http://francois.de-campredon.fr/flexAcacia</namespace>
+					</includeNamespaces>
+					<namespaces>
+						<namespace>
+							<uri>http://francois.de-campredon.fr/flexAcacia</uri>
+							<manifest>${project.build.sourceDirectory}/validation-parsley-manifest.xml</manifest>
+						</namespace>
+					</namespaces>
+					<includeFiles>
+						<include>${project.build.sourceDirectory}/design.xml</include>
+						<include>${project.build.sourceDirectory}/metadata.xml</include>
+					</includeFiles>
+					<keepAs3Metadatas append="true">
+					 	<keepAs3Metadata>Metadata</keepAs3Metadata>
+					 	<keepAs3Metadata>Required</keepAs3Metadata>
+					 	<keepAs3Metadata>Target</keepAs3Metadata>
+					</keepAs3Metadatas>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
